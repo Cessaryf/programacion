@@ -1,17 +1,17 @@
 import java.util.Scanner;
 public class Numprimos {
-    public static boolean prim(int n) {
-        if (n <= 1) {
+    public static boolean prim(int numero) {
+        if (numero<=1) {
             return false;
         }
-        if (n <= 3) {
+        if (numero<=3) {
             return true;
         }
-        if (n % 2 == 0 || n % 3 == 0) {
+        if (numero %2==0 || numero% 3== 0) {
             return false;
         }
-        for (int i = 5; i * i <= n; i += 6) {
-            if (n % i == 0 || n % (i + 2) == 0) {
+        for (int i=5; i*i <=numero; i+=6) {
+            if (numero% i==0 || numero% (i + 2)== 0) {
                 return false;
             }
         }
@@ -20,19 +20,18 @@ public class Numprimos {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingresa un número entero: ");
+        System.out.print("Ingresa un numero: ");
         
         if (scanner.hasNextInt()) {
             int numero = scanner.nextInt();
             if (prim (numero)) {
-                System.out.println("El número " + numero + " es primo.");
+                System.out.println("El numero " + numero + " es primo.");
             } else {
-                System.out.println("El número " + numero + " no es primo.");
+                System.out.println("El numero " + numero + " no es primo.");
             }
         } else {
-            System.out.println("Por favor, ingresa un número entero válido.");
+            System.out.println("Ingresa otro numero c:");
         }
-        
         scanner.close();
     }
 }

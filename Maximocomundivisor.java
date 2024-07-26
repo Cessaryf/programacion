@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
+import java.util.Scanner;
 
 public class Maximocomundivisor {
     public static int calcularMCD(int a, int b) {
